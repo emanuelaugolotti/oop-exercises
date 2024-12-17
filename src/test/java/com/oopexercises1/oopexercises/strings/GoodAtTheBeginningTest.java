@@ -1,0 +1,18 @@
+package com.oopexercises1.oopexercises.strings;
+
+import com.oopexercises.strings.GoodAtTheBeginning;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class GoodAtTheBeginningTest {
+    @Test
+    public void goodAtTheBeginning() {
+        assertTrue(GoodAtTheBeginning.goodAtTheBeginning("good Sweet"));
+        assertFalse(GoodAtTheBeginning.goodAtTheBeginning(" good Sweet"));
+        assertFalse(GoodAtTheBeginning.goodAtTheBeginning("goo"));
+        assertFalse(GoodAtTheBeginning.goodAtTheBeginning(""));
+        assertTrue(GoodAtTheBeginning.goodAtTheBeginning("good"));
+    }
+}

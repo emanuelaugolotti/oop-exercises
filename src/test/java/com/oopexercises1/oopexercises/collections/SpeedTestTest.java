@@ -1,0 +1,27 @@
+package com.oopexercises1.oopexercises.collections;
+
+import com.oopexercises.collections.SpeedTest;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class SpeedTestTest {
+    final int times = 10000;
+
+    @Test
+    void testInsertBeginning() {
+        long arrayListTime = SpeedTest.insertBeginning(new ArrayList<>(), "nicola", times);
+        long linkedListTime = SpeedTest.insertBeginning(new LinkedList<>(), "nicola", times);
+        assertTrue(linkedListTime < arrayListTime);
+    }
+
+    @Test
+    void testInsertEnd() {
+        long arrayListTime = SpeedTest.insertEnd(new ArrayList<>(), "nicola", times);
+        long linkedListTime = SpeedTest.insertEnd(new LinkedList<>(), "nicola", times);
+        assertTrue(linkedListTime > arrayListTime);
+    }
+}
